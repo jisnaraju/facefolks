@@ -2,7 +2,7 @@ package mikku;
 
 	class Customer
 	{
-		private String name;
+		/*private String name;
 		String address;
 		 String contactNumber;
 		 String email;
@@ -45,7 +45,7 @@ package mikku;
 		}
 		public void setProofID(String proofID) {
 			this.proofID = proofID;
-		}
+		}*/
 		String ac;
 		 public String getAc() {
 			return ac;
@@ -93,12 +93,13 @@ package mikku;
 			 this.proofID=proofID;
 		 }
 		
-		*/ void register()
+		 void register()
 		  {
 			 regNo++;
 			  System.out.println(getName() +"\n" + getAddress() +"\n" +getContactNumber() +"\n"+getEmail()  + "\n" +getProofID() +"\n"+getProofType());
 			  System.out.println("Your register Number is "+regNo);
 		  }
+		*/
 		void book()
 		{
 			if(getAc().equals("AC"))
@@ -124,7 +125,30 @@ package mikku;
 				total=total+0;
 			 System.out.println("The total charge is Rs."+total);
 			 System.out.println("The services chosen are");
-			 System.out.println(getAc()+"\n"+getCot()+" cot"+"\n"+getCable()+"\n"+getWifi()+"\n"+getLaundry());
-			 
+			// System.out.println(getAc()+"\n"+getCot()+" cot"+"\n"+getCable()+"\n"+getWifi()+"\n"+getLaundry());
+			if(getAc().equals("AC") && getCot().equals("Double") ) 
+				System.out.println("Double cot AC room");
+			else if(getAc().equals("AC") && getCot().equals("Single") )
+				System.out.println("Single cot AC room");
+			else if(getAc().equals("nAC") && getCot().equals("Double") ) 
+				System.out.println("Double cot nAC room");
+			else if(getAc().equals("nAC") && getCot().equals("Single") )
+				System.out.println("Single cot nAC room");
+			 if(getCable().equals("C"))
+				System.out.println("Cable connection enabled");
+			else if(getCable().equals("nC"))
+				System.out.println("Cable connection not enabled");
+			 if(getWifi().equals("W"))
+				System.out.println("Wi-Fi enabled");
+			 else if(getWifi().equals("nW"))
+				System.out.println("Wi-Fi not enabled");
+			 if(getLaundry().equals("L"))
+				System.out.println("with laundry service");
+			else if(getLaundry().equals("nL"))
+				System.out.println("without laundry service");
+			
+			
+			
+			
 		}
 	}
